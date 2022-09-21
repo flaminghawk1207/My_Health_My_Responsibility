@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up page</title>
+    <style>
+        body{
+            background-image: url(img/sign_up_bg9.jpg);
+            background-size: cover;
+            
+        }
+        #box{
+            border: 2px solid black;
+            padding: 30px;
+            background-color:whitesmoke;
+            margin-left: 150px;
+            margin-right: 700px;
+            font-size: small;
+            font-weight:bold;
+        }
+
+        .btn{
+        background-color: rgb(38, 100, 87);
+        width: 10%;
+        height: 15%;
+        color:white;
+        font-size: 16px;
+        border-radius: 10px;
+        width: auto;
+        
+    }
+    .btn:hover{
+        background-color: rgb(214, 55, 55);
+    }
+    </style>
+
+<script>
+    function loadPage()
+    {
+         window.location="thank_you.html"
+    }
+
+    function validateForm()
+    {
+            var fn = document.forms["regform"]["firstname"].value;
+            var ln = document.forms["regform"]["lastname"].value;
+            var gn = document.forms["regform"]["gender"];
+            var ph = document.forms["regform"]["mobilenumber"].value;
+            var email=document.forms["regform"]["Email"].value;
+            var pass=document.forms["regform"]["password"].value;
+            var gn = document.forms["regform"]["gender"];
+            var dob=document.forms["regform"]["date"].value;
+
+            if(fn == null||fn =="")
+            {
+                alert("First name cannot be blank");
+                return false;
+            }
+            else if(ln == null||ln =="")
+            {
+                alert("Last name cannot be blank");
+                return false;
+            }
+            else if((gn[0].checked == false)&&(gn[1].checked == false))
+            {
+                alert("please enter your gender");
+                return false;
+            }
+            else if(dob == null||dob =="")
+                {
+                    alert("fill DOB");
+                    return false;
+                }
+            else if(ph.length != 10){
+                alert("enter your correct mobile number");
+                return false;
+            }
+            else if(!(( /^[6789][0-9]{9}$/).test(ph))){
+                    alert("The first number must contain 7,8,9 ");
+                    return false;
+                }
+            else if(!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))){
+                alert("enter your correct Email id");
+                return false;
+            }
+            else if(pass.length < 6)
+            {
+                alert("enter password more than 6 characters");
+                return false;
+            }
+            
+            
+            window.open("thank_you.html");
+            return true;
+        }
+</script>
+
+</head>
+
+<body>
+    <div style="line-height: 1.2;text-shadow: 2px 2px 5px rgb(228, 51, 51);">
+        <h2 style="color: white;margin-left: 110px;">MY HEALTH MY RESPONSIBILITY  <br> 
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up</h2>
+    </div>
+    <div id="box">
+        <form name="regform" method="post" onsubmit="return validateForm()" >
+               
+            <label for="fname">First Name</label> <br>
+            <input type="text" id="fname" name="firstname" placeholder="Enter the first name here" size="35"><br><br>
+
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="Enter the last name here" size="35"><br><br>
+
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"> 
+            <label for="female">Female</label><br><br>
+        
+            Date of Birth
+            <input type="date" name="date"><br><br>
+
+            <label for="Phone Number">Phone Number</label><br>
+            <input type="text" name="mobilenumber" placeholder="Enter your phone number here" size="35"><br><br>
+
+            Email:<br>
+            <input type="text" name="Email" placeholder="Enter your E-mail here" size="35"><br><br>
+
+            Password(min length of 6):<br>
+            <input type="password" name="password" placeholder="Enter you password here" size="35"><br><br>
+
+            <input type="checkbox" required> Terms and Conditions <br> <br>
+
+            <input type="submit" value="Create account" class="btn">
+            <br><br><a href="login_page.html">Existing User? Login In</a>
+        </form>
+
+        </form>
+    </div>
+</body>
+</html>

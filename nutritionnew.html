@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>nutritionsimplified</title>
+  <style>
+    .background-container {
+      position: relative;
+    }
+    .text-box {
+      position: absolute;
+      font-size: 30px;
+      font-family: helvatica;
+      top: 30%;
+      left: 35%;
+      color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      border-style: solid;
+      border-width: 4px;
+    }
+
+    .backimg {
+      filter: brightness(75%);
+      width: 100%;
+    }
+
+    body {
+      margin: 0px;
+      border: 0px;
+      padding: 0px;
+    }
+
+    .second-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding-top:100px;
+background-color:#f76c6c;
+      position:relative;
+      padding-bottom:500px;
+
+    }
+
+    .stuff {
+position:absolute;
+      font-size:20px;
+      font-family:helvatica;
+      color: black;
+      right:30px;
+      line-height:2;
+      top:20px;
+      border-radius:10px;
+      border-style: solid;
+      width:600px;
+      border-width: 4px;
+      border-color: black;
+      padding:8px;
+    }
+    .eat{
+      position:absolute;
+      height:300px;
+      left:20px;
+      top:20px;
+    }
+    .wordsfood{
+      position:absolute;
+      width:350px;
+      height:300px;
+      right:20px;
+      bottom:20px;
+
+    }
+    .stuffsti {
+position:absolute;
+      font-size:20px;
+      font-family:helvatica;
+      color: black;
+      left:10px;
+      bottom:0px;
+      line-height:1.2;
+      border-radius:10px;
+      border-style: solid;
+      margin-left: 10px;
+      border-width:4px;
+      border-color: black;
+      width:500px;
+      padding:8px;
+
+
+    }
+    .third-container{
+      position:relative;
+      background-color:#A8D0E6;
+      height:600px;
+    }
+    .classification{
+      font-family:sans-serif;
+      position:absolute;
+      font-size: 50px;
+      left:300px;
+      top:100px;
+      font-weight: bolder;
+    }
+
+
+    .button{
+      font-size:50px;
+      border-radius:12px;
+      background-color:white;
+      color:#24305E;
+      border: 2px solid #24305E;
+    }
+    .btn1{
+      width:350px;
+ height:75px;
+      top:300px;
+      display:inline-block;
+      position:absolute;
+      left:10px;
+    }
+    .btn2{
+      width:350px;
+ height:75px;
+        top:300px;
+        display:inline-block;
+      position:absolute;
+      left:425px;
+    }
+    .btn3{
+      width:350px;
+ height:75px;
+        top:300px;
+        display:inline-block;
+      position:absolute;
+      right:10px;
+    }
+    .btn4{
+      width:350px;
+ height:75px;
+      top:450px;
+      display:inline-block;
+      position:absolute;
+      left:10px;
+    }
+    .btn5{
+      width:350px;
+ height:75px;
+        top:450px;
+        display:inline-block;
+      position:absolute;
+      left:425px;
+    }
+    .btn6{
+      width:350px;
+ height:75px;
+        top:450px;
+        display:inline-block;
+      position:absolute;
+      right:10px;
+    }
+    .fourth-container{
+      position:relative;
+      height:900px;
+
+    }
+    .calories{
+      position:absolute;
+      border-radius: 10px;
+      height:300px;
+      width:400px;
+      left:50px;
+      border-width: 4px;
+      border-style: solid;
+      font-size:x-large;
+      font-style: helvatica;
+      padding:8px;
+
+
+    }
+    .canned{
+      position:absolute;
+      border-radius: 10px;
+      height:450px;
+      width:500px;
+      right:50px;
+      border-width: 4px;
+      border-style: solid;
+      bottom:60px;
+      font-style: helvatica;
+      font-size: x-large;
+      padding:10px;
+
+    }
+    .fifth-container{
+      position:relative;
+      height:600px;
+      width:100%;
+      background-color:#f76c6c;
+    }
+    .sixth-container{
+      position:relative;
+      height:900px;
+      background-color:#A8D0E6;
+
+    }
+    .micro{
+      position:absolute;
+      right:100px;
+      top:200px;
+      width:400px;
+    }
+    .macro{
+      position:absolute;
+      left:100px;
+      top:200px;
+      width:400px;
+
+
+    }
+
+
+    .macs{
+      text-align: center;
+      font-size:50px;
+      font-family:sans-serif;
+      font-weight: bolder;
+      margin:0px;
+    }
+    .mics{
+      position:absolute;
+      border-width: 4px;
+      text-align: center;
+      border-style: solid;
+      bottom:10px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-style: italic;
+
+    }
+    .bmi{
+      position: absolute;
+      left:30px;
+      border-width:4px;
+      height:380px;
+      border-radius: 10px;
+      border-style: solid;
+      top:50px;
+      width:400px;
+      font-size: 20px;
+      font-style: helvatica;
+      line-height: 1.2;
+      padding:8px;
+
+
+    }
+    .heads{
+      font-weight: bolder;
+      font-size: 20px;
+    }
+    .waist{
+      position:absolute;
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 4px;
+      height:330px;
+      bottom:10px;
+      right:40px;
+      width:350px;
+      font-style: helvatica;
+      font-size: 25px;
+      padding:8px;
+    }
+.calo{
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+.calo2{
+  position:absolute;
+  top:150px;
+  right:100px;
+}
+.can{
+  position:absolute;
+  bottom:100px;
+  left:40px;
+  height:300px;
+  width:400px;
+}
+.can2{
+  position:absolute;
+  bottom:300px;
+  left:300px;
+  height:200px;
+  width:300px;
+}
+.bims{
+  position:absolute;
+  top:50px;
+  right:40px;
+  height:400px;
+  width:600px;
+}
+.waisr{
+  position:absolute;
+  bottom:40px;
+  left:50px;
+  height:330px;
+}
+.nutty{
+  position:absolute;
+  bottom:100px;
+  right:380px;
+}
+button.button:hover{
+  background-color: #24305E;
+  color:white;
+}
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+ 
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:95%;
+  max-width:500px;
+  height:400px;
+  z-index:2;
+  text-align:left;
+  padding:20px;
+  padding-top: 2px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+ 
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+ 
+.popup.active .overlay {
+  display:block;
+}
+ 
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+ 
+
+  </style>
+  <script >
+  function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+function togglePopup2(){
+  document.getElementById("popup-2").classList.toggle("active");
+}
+function togglePopup3(){
+  document.getElementById("popup-3").classList.toggle("active");
+}
+function togglePopup4(){
+  document.getElementById("popup-4").classList.toggle("active");
+}
+function togglePopup5(){
+  document.getElementById("popup-5").classList.toggle("active");
+}
+function togglePopup6(){
+  document.getElementById("popup-6").classList.toggle("active");
+}
+  </script>
+</head>
+
+<body>
+  <div class="background-container">
+    <img src="img/nut1.jpeg" alt="nut" class="backimg">
+    <div class="text-box">
+      <h1>NUTRITION<br />
+        SIMPLIFIED</h1>
+    </div>
+  </div>
+  <div class="second-container">
+    <img src="img/nut2.jpg" alt="corn" class="eat">
+    <br><br><br>
+    <p class="stuff">
+      We always heard about having complete food for health and nourishment.<br />
+      Herewith, is a summary to understand main constituents of food.<br />
+      A nutrient is a substance used by an organism to survive, grow, and reproduce.<br>
+      Nutrients are compounds in foods essential to life and health, providing us with energy,<br /> the building blocks for repair and growth and substances necessary to regulate chemical processes.
+    </p>
+    <br><br><br>
+    <img src="img/right.jpg" alt="foodword" class="wordsfood">
+    <img src="img/nutty1.jpg" alt="nutty" class="nutty">
+    <p class="stuffsti">
+      Another term we come across in this journey is ‘Essential Nutrients’.
+Essential Nutrients are nutrients that are required for normal physiological (body function) and cannot be created by body, and these are required for survival. So, these need to be part of the dietary intake.
+Following are essential nutrients for humans.<br>
+  •	9 Amino Acids (Protein)<br>
+•	2 Fatty Acids (FAT)<br>
+•	13 Vitamins <br>
+•	16 Minerals <br>
+•	Water <br>
+
+While these essential, but can turn out to be toxic if consumed beyond the recommended quantities.
+
+      </p>
+  </div>
+  <div class="third-container">
+    <h1 class="classification">Classification Of Nutrients:</h1>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup()">×</div>
+        <h1>Carbohydrates</h1>
+        <p>Carbohydrates are your body's main source of energy: They help fuel your brain, kidneys, heart muscles, and central nervous system.For instance, fiber is a carbohydrate that aids in digestion, helps you feel full, and keeps blood cholesterol levels in check. Your body can store extra carbohydrates in your muscles and liver for use when you're not getting enough carbohydrates in your diet. A carbohydrate-deficient diet may cause headaches, fatigue, weakness, difficulty concentrating, nausea, constipation, bad breath and vitamin and mineral deficiencies.</p>
+        <h3>sources:</h3>
+        <p>quinoa, amaranth, barley,berries, citrus fruits ,sweet potatoes, yams, lentils, black beans, low-fat milk,etc.</p>
+      </div>
+    </div>
+    <button class="button btn1" onclick="togglePopup()">Carbohydrates</button>
+    <div class="popup" id="popup-2">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup2()">×</div>
+        <h1>Protiens</h1>
+        <p>Humans can’t survive without all nine essential amino acids. Protein is essential to building bones,and body tissues, such as muscles, but protein does much more than that. Protein participates in practically every process of a cell. It plays a part in metabolic reactions, immune response, protein provides a source of energy, assists in cellular repair, form blood cells, and more.</p>
+        <h3>sources:</h3>
+        <p>meat, poultry, fish, eggs, milk, cheese, yogurt, quinoa,soybeans,etc.</p>
+      </div>
+    </div>
+    <button class="button btn2" onclick="togglePopup2()">Protiens</button>
+    <div class="popup" id="popup-3">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup3()">×</div>
+        <h1>Fats</h1>
+        <p>Fats allow humans and animals to consume fat-soluble vitamins and provide them with essential fatty acids, that is, those indispensable fatty acids that their bodies are unable to synthesize themselves. The efficiency of fat as foodstuff is very high, because the fat contained in food is almost completely reabsorbed by the body. Fats also provide a smooth, creamy consistency to many dishes, which translates into a good mouth-feel.</p>
+        <h3>sources:</h3>
+        <p>butter, oil, nuts, meat, fish,some dairy products,etc.</p>
+      </div>
+    </div>
+    <button class="button btn3" onclick="togglePopup3()">Fats&nbsp&nbsp</button>
+
+    <br>
+    <br />
+    <br><br>
+    <div class="popup" id="popup-4">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup4()">×</div>
+        <h1>Vitamins</h1>
+        <p>Vitamins don't provide energy, like carbohydrates, proteins and fats, but they are essential compounds that help the body grow and function optimally. Thirteen essential vitamins help boost your immunity, strengthen your bones, heal wounds, bolster your eyesight and assist you in obtaining energy from food -- among multiple other functions. Without adequate vitamin intake, you may feel lethargic, be vulnerable to infection and develop other serious complications that can endanger your health and life.</p>
+        <h3>sources:</h3>
+        <p>meat, poultry,carrots,sweet potatoes, spinach, nuts, seeds, vegetable oils,fish,etc.</p>
+      </div>
+    </div>
+    <button class="button btn4" onclick="togglePopup4()"> &nbsp&nbsp&nbsp&nbspVitamins&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+    <div class="popup" id="popup-5">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup5()">×</div>
+        <h1>Minerals</h1>
+        <p>Minerals are important basic building blocks for proper nutrition and health. Without them, other nutrients are unable to function properly. Amino acids and enzymes don’t function as well as they should, resulting in other nutrients not breaking down enough to be properly absorbed. The end result; serious vitamin and mineral deficiencies. Minerals create a healthy environment in which the body, using vitamins, proteins, carbohydrates, and fats, can grow, function, and heal itself. They are quite different from vitamins in their structure and the work they do, but the two enjoy an excellent working relationship.</p>
+        <h3>sources:</h3>
+        <p>meat,cereals,fish,milk and dairy foods,fruit and vegetables,nuts,etc.</p>
+      </div>
+    </div>
+    <button class="button btn5" onclick="togglePopup5()">Minerals</button>
+    <div class="popup" id="popup-6">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup6()">×</div>
+        <h1>Water</h1>
+        <p>All plants and animals need water to survive. There can be no life on earth without water. Why is water so important? Because 60 percent of our body weight is made up of water. Our bodies use water in all the cells, organs, and tissues, to help regulate body temperature and maintain other bodily functions. Because our bodies lose water through breathing, sweating, and digestion, it's crucial to rehydrate and replace water by drinking fluids and eating foods that contain water.Water also helps in creating saliva,regulating body temperature,protects tissues and spinal chord,helps in excretion,etc.</p>
+        <h3>sources:</h3>
+        <p>fruits,mineral water,cold/soft drinks,etc.</p>
+      </div>
+    </div>
+    <button class="button btn6" onclick="togglePopup6()">Water</button>
+
+  </div>
+  <div class="fourth-container">
+    <p class="calories">
+      <strong>Calorie:</strong><br />
+      The food we take is finally converted into energy. Calorie is amount of energy (heat) it
+      takes to raise temperature of 1 gm of water by 1 degree Celsius.
+      We need to understand the calories a food item generates, to decide the quantity to
+      be consumed.
+    </p>
+    <img src="img/calo.jpg" alt="calo" class="calo">
+    <img src="img/calo2.jpg" alt="calo2" class="calo2">
+    <p class="canned">
+      <strong>Understanding nutrients on packaged food:</strong><br />
+We see RNI/RDI/GDA as labelled on the packaged food along with the micro/macro nutrients.<br />
+•	RNI: Recommended Nutrient Intake<br />
+•	RDI: Recommended Daily Allowance<br />
+•	GDA: Gross Daily Allowance<br />
+Though these are used by different products/brands but mean the same. This is to tell - by consuming one serving of the packet (or as mentioned in the package), how much of recommended daily intake is fulfilled.
+The quantities are mentioned in terms of units - gm (grams), mg (milligram) or mcg/micro symbol (micro grams).
+
+    </p>
+    <img src="img/canned.jpg" alt="canned" class="can">
+    <img src="img/canned2.jpg" alt="canned2" class="can2">
+  </div>
+  <div class="fifth-container">
+    <br><br><br>
+    <p class="macs">Micro And Macro Nutrients</p>
+    <br><br>
+    <img src="img/macro.jpg" alt="macro" class="macro">
+    <img src="img/micro.jpg" alt="micro" class="micro">
+    <p class="mics">
+      macro-nutrients are required in large quantities while  micro-nutrients are required in small quantities <br>
+      To start the journey of healthy living, we should ensure that above nutrients are in the
+required quantities for the age and lifestyle in the food we consume.
+    </p>
+  </div>
+  <div class="sixth-container">
+    <br><br><br><br>
+    <div class="bmi">
+      <p class="heads">
+        Body Mass Index(BMI):
+      </p>
+      <br />
+      <br />
+      <p>
+      Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual.
+      </p>
+    </div>
+    <img src="img/bmi.jpg" alt="bmi" class="bims">
+    <p class="waist"><strong>Waist circumference:</strong><br><br><br>
+Measuring waist circumference helps to screen possible health risks that come with
+overweight and obesity. This risk goes up with a waist size that is greater than 35 inches
+for women or greater than 40 inches for men. <br>
+<a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_dis.htm
+">click here for more info </a></p>
+<img src="img/waisr.jpg" alt="waisr" class="waisr">
+  </div>
+</body>
+
+</html>

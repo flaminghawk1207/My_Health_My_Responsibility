@@ -1,0 +1,251 @@
+:root
+{
+  --primary-color: #A8D0E6;
+  --secondary-color: #FFFFFF;
+  --accent-primary-color: #24305E;
+  --accent-secondary-color: #F76C6C;
+  --accent-text-color: var(--secondary-color);
+}
+.Main-heading 
+{
+  position: relative;
+}
+.background
+{
+  filter: brightness(50%);
+  width: 100%;
+  height: 655px;
+}
+.text 
+{
+  position: absolute;
+  font-size: 30px;
+  font-family: helvatica;
+  text-align: center;
+  top: 25%;
+  left: 13%;
+  color: var(--secondary-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.InfoCard
+{
+  border-radius: 5px;
+  width: 100%;
+  height: auto;    
+  display: flex;
+  margin-bottom: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.Info
+{
+  border-radius: 5px;
+  min-height: 300px;
+  margin: 15px;
+  flex: 70%;
+  text-align: justify;
+  font-size: 28px;
+}
+
+.Infoimg
+{
+    border-radius: 5px;
+    flex: 30%;
+    background-size: cover;
+    background-position: center;
+}
+
+.InfoCard:nth-of-type(even)
+{
+    background-color: var(--primary-color);
+}
+.InfoCard:nth-of-type(odd)
+{
+    background-color: var(--accent-secondary-color);
+}
+.InfoCard:nth-of-type(even) .Infoimg
+{
+    order: 1;
+}            
+
+
+.collapsible {
+  background-color: var(--accent-primary-color);
+  border-color: var(--accent-secondary-color);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  padding-left: 50px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 25px;
+}
+
+.collapsible:hover 
+{
+  background-color: var(--accent-secondary-color);
+}
+
+.collapsible:after 
+{
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active
+{
+    background-color: var(--accent-primary-color);
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.Awareness
+{
+  width: 100%;
+  display: flex;
+  height: auto;
+}
+
+.AwarenessText
+{
+  background-color: var(--primary-color);
+  border: 5px solid var(--accent-primary-color);
+  border-radius: 5px;
+  min-height: 250px;
+  margin: 5px;
+  padding: 15px;
+  padding-bottom: 0px;
+  flex: 58%;
+  text-align: justify;
+  font-size: 22px;
+
+}
+
+.AwarenessImg
+{
+  margin-top: 5px;
+  padding-bottom: 0px;
+  border: 5px solid var(--accent-primary-color);
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  flex: 42%;
+}
+
+
+.AwarenessHeading
+{
+  border: 5px solid var(--accent-primary-color);
+  background-color: var(--accent-secondary-color);
+  border-radius: 5px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.Challenges
+{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;   
+  background-color:var(--accent-secondary-color);
+  height:wrap;
+  margin-bottom: 5px;
+}
+.ChallengesText
+{
+  flex: 65%;
+  font-size: 25px;
+  font-family: helvatica;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  color: black;
+  border: 5px solid var(--accent-primary-color);
+  border-top: 0px;
+  border-radius: 5px;
+}
+.Challengeimg
+{
+  background-image: url(img/awarenesschallenge.jpg);
+  flex: 35%;
+  background-size: contain;
+  z-index: 0;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
+  display: block;
+}
+#ChallengesHeading
+{
+  border: 5px solid var(--accent-primary-color);
+  background-color: var(--accent-secondary-color);
+  border-radius: 5px;
+  font-size: 35px;
+  text-align: center;
+}
+.Timeline
+{
+  background-color: var(--primary-color);
+  z-index: 2;
+  transition: transform .2s;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Timeline:hover
+{
+    transform: scale(1.2);    
+}
+
+ 
+.slideshow-container 
+{
+  flex: 42%;
+}
+
+
+.fade 
+{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.mySlides
+{
+  display: none;
+}
+
+.mySlides1
+{
+  display: none;
+}

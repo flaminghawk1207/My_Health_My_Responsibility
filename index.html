@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="indexStyle.css"/>
+        <title>
+            MyHealthMyResposibility
+        </title>
+        <script>
+            function toggleSideNav(){
+                if(document.getElementById("sideNavExpandedView").offsetWidth == "0"){
+                    document.getElementById("sideNavExpandedView").style.flex = "15%";
+                    document.getElementById("contentContainer").style.flex = "80%";
+                    document.getElementById("expandButton").style.backgroundColor = "var(--accent-secondary-color)";
+                }else{
+                    document.getElementById("sideNavExpandedView").style.flex = "0";
+                    document.getElementById("contentContainer").style.flex = "95%";
+                    document.getElementById("expandButton").style.backgroundColor = "var(--accent-primary-color)";
+                }
+            }
+            function loadPage(x, fileName){
+                if(document.getElementById("mainContent") == fileName){
+                    return;
+                }
+                document.getElementById("mainContent").data = fileName;
+                var buttons = document.getElementsByClassName("sideNavButton");
+                var tabs = document.getElementsByClassName("sideNavTab");
+                for(var i = 0;i<buttons.length;i++){
+                    if(buttons[i].id === "expandButton"){
+                        continue;
+                    }
+                    buttons[i].style.backgroundColor = "var(--accent-primary-color)";
+                }
+                for(var i = 1;i<tabs.length;i++){
+                    tabs[i].style.backgroundColor = "var(--accent-secondary-color)";
+                }
+                buttons[x].style.backgroundColor = "var(--accent-secondary-color)";
+                tabs[x].style.backgroundColor = "var(--accent-primary-color)";
+            }
+            setTimeout(loadPage(2,'landingPage.html'),2000);
+        </script>
+    </head>
+    <body>
+        <div id="outerContainer">
+            <div id="sideNavBar">
+                <!--Letters to be replaced by icons-->
+                <button id="expandButton" class="sideNavButton" style="font-size: 40px;" onclick="toggleSideNav()" title="Open Menu">
+                    <!-- &rarr; -->
+                    &#8801;
+                </button>
+                <button class="sideNavButton" onclick="loadPage(1, 'login_page.html')" title="Login">
+                    <img src="img/icons/Account-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton"  onclick="loadPage(2, 'landingPage.html')" title="Home">
+                    <img src="img/icons/Home-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(3, 'WhyNutrition.html')" title="Why Nutrition">
+                    <img src="img/icons/WhyAwareness-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(4, 'nutritionnew.html')" title="Nutrition Simplified">
+                    <img src="img/icons/Nutrients-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(5, 'selfassessment.html')" title="Self-Assessment">
+                    <img src="img/icons/Assessment-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(6, 'selfassessment2.html')" title="Calculators">
+                    <img src="img/icons/Calculator-512.png" width="90%" height="60%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(7, 'actions.html')" title="Recommended Actions">
+                    <img src="img/icons/Actions-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(8, 'tools.html')" title="Tools">
+                    <img src="img/icons/Tools-512.png" width="60%" height="60%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(9, 'FAQ.html')" title="FAQ">
+                    <img src="img/icons/FAQ-512.png" width="70%" height="70%">
+                </button>
+                <button class="sideNavButton" onclick="loadPage(10, 'aboutPage.html')" title="About">
+                    <img src="img/icons/About-512.png" width="70%" height="70%">
+                </button>                
+            </div>
+            <div id="sideNavExpandedView">
+                <button style="text-align: right;padding-right: 20px;font-size: x-large;" class="sideNavTab" onclick="toggleSideNav()" title="Close Menu">
+                    X
+                </button>
+                <button class="sideNavTab" onclick="loadPage(1, 'login_page.html')">
+                    Sign-up/Sign-in
+                </button>
+                <button class="sideNavTab" onclick="loadPage(2, 'landingPage.html')">
+                    Home
+                </button>
+                <button class="sideNavTab" onclick="loadPage(3, 'WhyNutrition.html')">
+                    Why Awareness?
+                </button>
+                <button class="sideNavTab" onclick="loadPage(4, 'nutritionnew.html')">
+                    Nutrition Simplified
+                </button>
+                <button class="sideNavTab" onclick="loadPage(5, 'selfassessment.html')">
+                    Self-Assessment
+                </button>
+                <button class="sideNavTab" onclick="loadPage(6, 'selfassessment2.html')">
+                    Calculators
+                </button>
+                <button class="sideNavTab" onclick="loadPage(7, 'actions.html')">
+                    Recommended Action
+                </button>
+                <button class="sideNavTab" onclick="loadPage(8, 'tools.html')">
+                    Tools
+                </button>
+                <button class="sideNavTab" onclick="loadPage(9, 'FAQ.html')">
+                    FAQ
+                </button>
+                <button class="sideNavTab" onclick="loadPage(10, 'aboutPage.html')">
+                    About
+                </button>                
+            </div>
+            <div id="contentContainer">
+                <object id="mainContent" type="text/html" data="landingPage.html"></object>
+            </div>
+        </div>
+    </body>
+</html>

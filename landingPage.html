@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="landingPageStyle.css"/>
+        <script>
+            var slideIndex = 0;
+            function slideShow() {
+                var i;
+                var x = document.getElementsByClassName("reviewSlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1}    
+                x[slideIndex-1].style.display = "block";  
+                setTimeout(slideShow, 4000); // Change image every 4 seconds
+            }
+            setTimeout(slideShow, 0);
+        </script>
+    </head>
+    <body>
+        <div id="headerContent">
+            <span id="header">MyHealth<br>
+                MyResposibility</span>
+        </div>
+        <div id="bodyContent">
+            <div class="infoCard">
+                <div class="infoCardContent">
+                    <span class="infoCardContentHeader">Introduction</span><br><hr>
+                    No one disputes the fact that ‘Health is wealth’, and once health is impaired, money
+can be of any use. A healthy and nutritious food is important for nourishment. But, it is
+not very motivating to study, follow nutritious plan and consume food that is complete
+in all nutrients, due to various reasons. This website offers curated information and guidance on proper nutrition collected from various sources in an easily understandable way.
+                </div>
+            <div class="infoCardImg" style="background-position:left;background-image: url(img/introLandingPage.jpg);"></div>
+            </div>
+            <div class="infoCard">
+                <div class="infoCardContent">
+                    <span class="infoCardContentHeader">Why Awareness?</span><br><hr>
+                    Adequate and proper nutrition is an important aspect of a healthy lifestyle.
+                     Therefore, it is essential to promote an awareness of the nutrients 
+                     contained in foods in relation to their roles in body maintenance, growth, reproduction, health, and disease prevention in humans.
+                     Talent, dedication and passion are precursors to greatness but right nutrition helps us to ensure that we have the right arsenal to suceed.
+                     Visit why nutrition awareness page to know more.
+                </div>
+                <div class="infoCardImg" style="background-image: url(img/awarenessLandingPage.jpg);"></div>
+            </div>
+            <div class="infoCard">
+                <div class="infoCardContent">
+                    <span class="infoCardContentHeader">Nutrition Simplified</span><br><hr>
+                    We all know that food is important for us and food which is filled with nutrients,provides nourishment to our body.
+But the question that we need to ask ourselves is if we know all about the nutrients which provide us with this nourishment.
+Here we will try our best to answer that question by providing information like the classification of nutrients based on quantity and quality
+and also take a peak into concepts like BMI,waist circumference and growth charts.
+                </div>
+                <div class="infoCardImg" style="background-image: url(img/nutritionLandingPage.jpg);"></div>
+            </div>
+            <div class="infoCard">
+                <div class="infoCardContent">
+                    <span class="infoCardContentHeader">Tools</span><br><hr>
+                    We always hear about calories and also that the food we eat provides us with these calories. But its almost impossible for a common man to calculate the 
+number of calories he recieves through food or how many he burns after a tiring workout without some resources. In this section we will briefly look into 
+some helpful resourses like the cronometer,the guide published by the NIN and fitness apps like fitbit and strava.
+                </div>
+                <div class="infoCardImg" style="background-image: url(img/toolsLandingPage.png);"></div>
+            </div>
+            <div class="infoCard">
+                <div class="infoCardContent">
+                    <span class="infoCardContentHeader">Self-Assessment</span><br><hr>
+                    In the self assessment page, we help you understand the needs and the care you need to take to keep body fit. You can understand different methods in which
+                    you can assess your own body and health through BMI, reference charts and other different materials which would guide you in assessing the calorie requirements,
+                    current health status, and what you need to do to improve.
+                </div>
+                <div class="infoCardImg" style="background-image: url(img/selfassessmentLandingPage.jpg);background-position: center;"></div>
+            </div>
+            <div class="infoCard">
+                <div class="infoCardContent">
+                    <span class="infoCardContentHeader">Recommended Actions</span><br><hr>
+                    In recommended actions we will know how to balance the calorie. 
+                    It can be done in three ways weight gain, weight loss and weight maintenance. 
+                    We need to equalize calorie intake and calorie expenditure. 
+                    This can be done by reducing the calorie intake or increase the calorie expenditure.
+                </div>
+                <div class="infoCardImg" style="background-image: url(img/recommendedActionsLandingPage.jpg);background-position: center top;"></div>
+            </div>
+            <img class="reviewSlides" src="img/slide-1.jpg"/>
+            <img class="reviewSlides" src="img/slide-2.jpg"/>
+            <img class="reviewSlides" src="img/slide-3.jpg"/>
+        </div>
+    </body>
+</html>

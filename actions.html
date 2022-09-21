@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   
+    :root {
+        --primary-color: #A8D0E6;
+        --secondary-color: #FFFFFF;
+        --accent-primary-color: #24305E;
+        --accent-secondary-color: #F76C6C;
+        --accent-text-color: var(--secondary-color);
+    }
+    .heading {
+  
+  text-align: center;
+  color:#FFFFFF;
+  background-image: url(img/top_page.jpg);
+  font-size: 30px;
+  width:100%;
+  height:100%;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+html,body{
+  width: 100%;
+  height:100%;
+}
+.Main-heading 
+{
+    position: relative;
+  
+    
+}
+.background
+{
+    filter: brightness(50%);
+    width: 100%;
+    height: 655px;
+}
+.text 
+{
+    position: absolute;
+    font-size: 30px;
+    font-family: helvatica;
+    text-align: center;
+    top: 35%;
+    left: 15%;
+    color: var(--secondary-color);
+    padding-left:60px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-width: 4px;
+    
+}
+
+.cards:nth-of-type(even){
+ background-color:var(--secondary-color);
+}
+}
+.cards:nth-of-type(odd){
+ background-color:orange;
+}
+.cards{
+  position: relative;
+  width: auto;
+ height: 450px;
+ display: flex;
+ 
+}
+.cardsimg{
+flex: 40%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover; 
+}
+.cardscont{
+  flex: 60%;
+  color:black;
+  font-size: 28px;
+  font-family: helvatica;
+  padding-left: 10px;
+  
+}
+.cards:nth-of-type(even) .cardsimg{
+                order: 1;
+            } 
+.cards:nth-of-type(even) .cardscont{
+                order: 2;
+            }
+.cards:nth-of-type(odd) .cardsimg{
+                order: 2;
+            } 
+.cards:nth-of-type(odd) .cardscont{
+                order: 1;
+}
+.cards:nth-of-type(odd)  {
+  background-color: #A8D0E6;
+                }  
+.cards:nth-of-type(even)  {
+  
+  background-color: orange;
+  }
+     
+
+body{
+  margin: 0;
+}   
+
+#video{
+  position: absolute;
+  top: 0.5%;
+  right:2%;
+
+}
+#top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(24, 211, 40);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius:7px;
+}
+
+#top:hover {
+  background-color: rgb(219, 28, 108);
+}
+
+#more {display: none;}
+
+#myBtn{
+  background-color: rgb(235, 231, 18);
+  border-radius: 5px;
+  font-family: ebrima;
+}
+</style>
+
+<script>
+
+  // read more && read less
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+</script>
+
+</head>
+<script>
+  window.alert("Welcome to recomended action page")
+</script>
+
+<body style margin: 0px>
+  <button onclick="topFunction()" id="top" title="Go to top">Top ↑</button>
+<script>
+//scroll up
+var mybutton = document.getElementById("top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+  </script>
+  
+        <div class="Main-heading" >
+            <img src="img/top_page.jpg" alt="IMG" class="background">
+            <div class="text">
+                <h1>RECOMENDED ACTIONS</h1> 
+            </div>
+        </div>
+        <div class="cards"> 
+          <div class="cardscont">
+          <p>
+          <h2>Understanding calorie Balance:</h2> 
+As per the self-assessment section, you have calculated the Calories consumed (A), the 
+required calories for your daily activities (B) and exercise activities (C) (Please refer to the 
+Self-assessment section). <br>
+Your total calorie out D = B+C. <br> 
+As per energy balance it can be balanced in three ways,
+<ul>
+  <li>weight loss</li>
+  <li>weight gain</li>
+  <li>weight Maintenance</li>
+</ul>
+          </p>
+           </div> 
+           <div class="cardsimg" style="background-image: url(img/caloric_management.jpg); background-size:contain" >
+              
+           </div>
+        </div>
+
+        <div class="cards" style="height:300px" > 
+          <div class="cardscont">
+            <h3 > Weight Loss</h3>
+            <p>
+              If you are consuming less than required calories (Calorie Deficit), the 
+              required energy to meet your energy requirements is received by burning the 
+              existing body weight. 
+            </p>
+           </div> 
+           <div class="cardsimg" style="background-image: url(img/weightloss.jpg);">
+              
+           </div>
+        </div>
+      
+        <div class="cards" style="height:300px" > 
+          <div class="cardscont">
+            <h3>Weight Gain</h3>
+            <p>
+              If you are consuming more than D (Calorie Surplus), it turns out as 
+              excess body weight and adds to your body weight over a period of time.  
+            </p>
+           </div> 
+           <div class="cardsimg" style="background-image: url(img/weight_gain.jpg);">
+              
+           </div>
+        </div>
+      
+        <div class="cards" style="height:400px" > 
+          <div class="cardscont">
+            <h3>Weight Maintenance</h3>
+            <p>
+              If you are consuming the calories to meet your daily needs 
+            (both exercise and daily activities), then there will not be any weight change over 
+            a period of time. Without a change in the weight, if you want to focus on overall 
+            nourishment, you can change the constituents of dietary intake<br> 
+            <b>e.g.</b> reduce the 
+            carbs and increase the protein to maintain healthy proportions of nutrients 
+            required for nourishment. <br>
+            
+           </div> 
+           <div class="cardsimg" style="background-image: url(img/weight_maintenance.jpg); background-size:contain">
+           </div>
+        </div>
+
+        <div class="cards" style="height:200px" style="flex=100%" > 
+          <div class="cardscont">
+            <p>
+            In the Calories Balance, you can plan your weight loss program by <br>
+            <ol>
+            <li>Reducing the calorie intake over a period of time (A) </li>
+            <li>Increasing the exercise duration and burning more calories ( C )</li>
+          </ol>
+         
+        </p>
+           </div> 
+          </div>
+
+        <div class="cards" style="height:530px" > 
+          <div class="cardscont">
+            <p>
+            
+          <h2>Planning weight loss: </h2>
+          <b>a) Reducing the calorie intake (A)</b>  <br>
+          Weight loss target: 5 kg <br>
+          Weight loss target period: 90 days <br>
+          Target Calorie loss per day: 5 * 7500/90 = 417 K Cal. <br> <br>
+        <b>Planning your intake:</b> <br>
+         You need to reduce daily calorie intake by 417, (less than the 
+          required calories), in this example: (2420-417) = 2003 Calories. Limit your intake to 2003 
+          Calories. <br>
+          The person by reducing the calorie intake by 417 calories for a period of 90 days, he (or 
+          she) is likely to lose 5 kg of weight. 
+        </p>
+           </div> 
+           <div class="cardsimg" style="background-image: url(img/Reducing_the_calorie_intake.JPG);">
+           </div>
+        </div>
+
+        <div class="cards" style="height:370px" > 
+          <div class="cardscont">
+          <p>
+          <b>b) Increasing the exercise calorie expenditure (C ) </b>  <br>
+          If the person also adds the further loss of calories through exercises<b> <br>
+            e.g.</b> 400 Calories 
+          daily for a period of 90 days, he is likely to lose another 5 Kg. (400 * 90 days / 7500) <br>
+          (For weight gain, similar calculations can be done, by increasing the daily calorie 
+          intake (A), over target period, follow up plan to gain weight.)
+        </p>
+           </div> 
+           <div class="cardsimg" style="background-image: url(img/burn_more_calories.jpg);"></div>
+           </div>
+        </div>
+
+
+
+        <div class="cards" style="height:400px;" > 
+          <div class="cardscont" style=";font-size: 25px">
+          <p>
+            User can plan his calorie intake, and exercise expenditure as per his goals. <br>
+            <b>Exercise Options</b> 
+            One can consider different exercise options to meet their <br>requirements. 
+            <ol>
+            <li> Endurance</li> 
+          <li>Strength </li>
+          <li>Balance </li>
+          <li> Flexibility </li>
+          </ol>
+          <span id="dots">...</span><span id="more">
+            Covering detailed exercises is not part of the scope of this website, but some useful 
+            information is provided here for reference.<br>
+            More information can be found at <a href="https://www.nutrition.gov/topics/exercise-and-fitness" target="_blank">click here</a>
+          </span><button onclick="myFunction()" id="myBtn">Read more</button>
+          </p>
+          
+        <div id="video">
+         <video width="320" height="240" controls > 
+          <source src="videos/burn1.mp4" type="video/mp4">            
+           Your browser does not support the video tag. 
+         </video> 
+        </div>
+          
+        </div>   
+        </div>
+        
+</body>
+      </html>

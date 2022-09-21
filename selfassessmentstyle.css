@@ -1,0 +1,187 @@
+:root
+    {
+    --primary-color: #A8D0E6;
+    --secondary-color: #FFFFFF;
+    --accent-primary-color: #24305E;
+    --accent-secondary-color: #F76C6C;
+    --accent-text-color: var(--secondary-color);
+    } 
+    body{
+            margin: 0;
+            overflow-x: hidden;
+            font-size: large;
+    }
+    .mainheading{
+        position:absolute;
+        border-style: solid;
+        border-width: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: var(--primary-color);
+        left:30%;
+        top: 200px;
+        font-size: 55px;
+        color: var(black);
+
+     }
+     .mainbody1{
+         background-color: var(--accent-primary-color);
+         padding-top: 1%;
+         padding-bottom: 2%;
+     }
+     .bmilogimg{
+        position:absolute;
+        left:7%;
+        top:560px;
+     }
+     .bmimargin{
+         margin-left: 28.5%;
+         margin-right: 1%;
+     }
+     .bmihead{
+         color:var(--secondary-color);
+         font-size: 25px;
+         position:relative;
+         left:28%;
+     }
+     .bmicon{
+         color: var(--secondary-color);
+         font-size: 23px;
+     }
+     .mainbody2{
+         background-color: var(--accent-secondary-color);
+         padding-top: 0.2%;
+         padding-bottom: 2%;
+     }
+     .growthead{
+         color:var(--secondary-color);
+         font-size: 30px;
+         background-color: var(--accent-primary-color) ;
+         margin-left: 7%;
+         margin-right: 5%;
+     }
+     .growthimghead{
+        color:var(--secondary-color);
+        font-size: 25px;
+     }
+     .growthboys{
+         position:relative;
+         left:7%;
+     }
+     .growthgirls{
+         position:absolute;
+         top:900px;
+         left:55%;
+     }
+     .growthboys:hover .overlayboys {
+        opacity: 0.8;
+      }
+      .growthgirls:hover .overlaygirls {
+        opacity: 0.8;
+      }
+      
+     .overlayboys {
+        position: absolute;
+        top: 61px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 660px;
+        width: 480px;
+        opacity: 0;
+        transition: .5s ease;
+        background-color:var(--primary-color);
+      }
+      
+     .overlaygirls {
+        position: absolute;
+        top: 94px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 660px;
+        width: 476px;
+        opacity: 0;
+        transition: .5s ease;
+        background-color:var(--primary-color);
+      }
+     .mainbody3{
+         background-color: var(--accent-primary-color);
+         padding-top: 2%;
+         padding-bottom: 4%;
+         font-size: 23px;
+         color: var(--secondary-color);
+         padding-left: 5%;
+     }
+     .waistimg{
+         position:absolute;
+         top:1780px;
+         left:77%;
+         width: 16%;
+        height:auto;
+        border: solid 5px var(--primary-color);
+     }
+     .waistimg:hover {
+        -ms-transform: scale(1.3); /* IE 9 */
+        -webkit-transform: scale(1.3); /* Safari 3-8 */
+        transform: scale(1.3); 
+        transition: .5s ease;
+      }
+     .mainbody4{
+         background-color: var(--accent-secondary-color);
+         padding-top: 2%;
+         padding-bottom: 2%;
+     }
+     .calbalimg{
+         min-width: auto;
+        width: 27%;
+        height:auto;
+        float:right;
+        position:absolute;
+        right:3%;
+        top:2250px;
+        border: solid 5px var(--primary-color);
+     }
+     .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color:var(--primary-color);
+      }
+      .calbalimg:hover .overlay {
+        opacity: 0.8;
+      }
+      
+     .calhead{
+        color:var(--secondary-color);
+         font-size: 30px; 
+         background-color: var(--accent-primary-color);
+         padding-left: 5px;
+         margin-right: 39%;
+     }
+     .calcon{
+        color: var(--secondary-color);
+        font-size: 20px;
+     }
+     .calimg3{
+         position:relative;
+         left:13%;
+     }
+     .calintakebody{
+         position:relative;
+         left:3%;
+         top:346%;
+     }
+     .intakerefer{
+         position:relative;
+         top:490%;
+         left:3%;
+         font-size: 21px;
+         color: var(--secondary-color);
+     }

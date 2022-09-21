@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="aboutPageStyle.css"/>
+        <script>
+            function validate(){
+                var name = document.getElementById("nameField").value;
+                var phone = document.getElementById("phoneField").value;
+                var email = document.getElementById("emailField").value;
+                var message = document.getElementById("messageField").value;
+
+                if(!(/^[a-zA-Z ]+$/.test(name))){
+                    alert("Please enter a valid name.");
+                    return false;
+                }
+
+                var numbers = "0123456789";
+                if(!("789".includes(phone[0]))){
+                    alert("Phone number not valid.");
+                    return false;
+                }
+                for(var index = 0;index < phone.length;index++){
+                    if(!numbers.includes(phone[index])){
+                        alert("Phone number not valid.");
+                        return false;
+                    }
+                }
+
+                if(!(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))){
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+
+                if(!(/^[a-zA-Z0-9_.-]+$/.test(message))){
+                    alert("Please enter a valid message.");
+                    return false;
+                }
+                alert("Feedback submitted.");
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="headerContent">
+            <span id="header">About Us</span>
+        </div>
+        <div id="bodyContent">   
+            <div class="section">
+                <div class="sectionHeader">
+                    Who Are We?
+                </div>
+                <div class="sectionContent">
+                    <div class="idCard" style="margin-left: 0%;">
+                        <img class="idCardPhoto" src="img/spiderMan.jpg">
+                        <p class="idCardInfo">Anish</p>
+                    </div>
+                    <div class="idCard">
+                        <img class="idCardPhoto" src="img/doctorStrange.jpg">
+                        <p class="idCardInfo">Ashwath</p>
+                    </div>
+                    <div class="idCard">
+                        <img class="idCardPhoto" src="img/eminem.jpg">
+                        <p class="idCardInfo">Jayanth</p>
+                    </div>
+                    <div class="idCard">
+                        <img class="idCardPhoto" src="img/thor.jpg">
+                        <p class="idCardInfo">Kishore</p>
+                    </div>
+                    <div class="idCard">
+                        <img class="idCardPhoto" src="img/ironMan.jpg">
+                        <p class="idCardInfo">Yashasvi</p>
+                    </div>
+                    <br><br><br><br><br><br><br><br>
+                </div>
+            </div>         
+            <div class="section">
+                <div class="sectionHeader">
+                    Disclaimer
+                </div>
+                <div class="sectionContent">
+                    <ul>
+                        <li>The information published here is collected from different sources, mentioned in references section. The information may be slightly modified in order to simplify the concepts to the target audience.</li> 
+                        <li>Information provided as guidance to understand, motivate and increase the awareness of Nutritious and Healthy food habits. </li> 
+                        <li>The information provided focusses on generalized audience, and additional personalized information in specific cases (medical / co-morbid conditions) can be sought through consultation of a Nutritionist. </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <div class="sectionHeader">
+                    References
+                </div>
+                <div class="sectionContent">
+                    <ul>
+                        <li><a target="_blank" href="https://www.nin.res.in/downloads/DietaryGuidelinesforNINwebsite.pdf">Dietary Guidelines - NIN</a> </li>
+                        <li><a target="_blank" href="https://www.bmj.com/content/361/bmj.k2392">History of modern nutrition science</a></li>
+                        <li><a target="_blank" href="https://www.britannica.com/science/body-mass-index">Body mass index</a></li>
+                        <li><a target="_blank" href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_dis.htm">Classification of Overweight and Obesity by BMI</a></li>
+                        <li><a target="_blank" href="https://cronometer.com/">Cronometer app</a> </li>
+                        <li><a target="_blank" href="https://www.strava.com/">Strava app</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <div class="sectionHeader">
+                    Feedback
+                </div>
+                <div class="sectionContent">
+                    <form method="POST" onsubmit="return validate()">
+                        <label for="nameField">Name: </label>
+                        <input type="text" id = "nameField" placeholder="Your Name"><br>
+                        <label for="phoneField">Phone No: </label>
+                        <input type="text" id = "phoneField" placeholder="Your Phone No" minlength="10" maxlength="10"><br>
+                        <label for="emailField">E-mail: </label>
+                        <input type="text" id = "emailField" placeholder="Your E-mail"><br>
+                        <label for="messageField">Message: </label>
+                        <textarea id="messageField" name="message" placeholder="Your Feedback"></textarea><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="section" style="min-height: 0;padding: 20px;">
+                <div class="sectionHeader">
+                    Contact Us
+                </div>
+                <div class="sectionContent" style="display: flex;padding: 0;position: relative;">
+                    <div id="contactInfo" style="flex: 60%;padding-top: 10px;padding-left: 10px;color: var(--accent-primary-color);">
+                        &rArr;Phone No: +91 12345-67890 <br>
+                        &rArr;E-mail: mhmr@gmail.com
+                    </div>
+                    <div id="buttonGroup" style="flex: 40%;">
+                        <button class="socialMediaButtons">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img class="socialMediaImages" src="img/icons/facebook-512.png">
+                            </a>
+                        </button>
+                        <button class="socialMediaButtons">
+                            <a href="https://twitter.com/?lang=en" target="_blank">
+                                <img class="socialMediaImages" src="img/icons/twitter-512.png">
+                            </a>
+                        </button>
+                        <button class="socialMediaButtons">
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <img class="socialMediaImages" src="img/icons/youtube-512.png">
+                            </a>
+                        </button>
+                        <button class="socialMediaButtons">
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img class="socialMediaImages" src="img/icons/instagram-512.png">
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>
+        Calculators
+    </title>
+    <link rel="stylesheet" type="text/css" href="selfassessment2style.css">
+    <script type="text/javascript" src="selfassessment2.js"></script>
+ </head>   
+ <body style="margin: 0;">
+     <div class="mainheading">
+         YOUR CALORIE REQUIREMENTS
+     </div>
+     <img src="img/selfa2head.jpg" alt="bgimg" width="100%" height="500px">
+
+     <div class="mainbody1">
+        <div class="bodycon1">
+               <div class="profilehead">
+                   <h3>Enter the Details</h3>
+               </div>
+               <div class="bodybg">
+                   <div class="profileimg">
+                       <img src="img/profilepic.jpg" alt="bmilog" width="65%">
+                    </div>
+                    <div class="formscon">
+                       <form name="infoform" method="post">
+                           <div class="bodagepos">
+                            <label >Body Weight :</label>
+                            <input type="number" id="formweight" name="formweight" placeholder="Weight in kg"><br/>
+                            <label>Height : </label>
+                       <input type="number" name="formheight" id="formheight"  placeholder="Height in cm"><br/>
+                            <label for="age">Age :</label>
+                            <input type="number" id="age" name="age"><br/>
+                           </div>
+                           <div class="genderradiopos">
+                               <label for="gender">Gender :</label>
+                               <input type="radio" id="male" name="gender">
+                               <label>Male</label><br/>
+                               <div class="femalepos">
+                                <input type="radio" id="female" name="gender">
+                                <label>Female</label><br/>
+                               </div>
+                               <div class="otherspos">
+                                <input type="radio" id="other" name="gender">
+                                <label for="others">Others</label><br/>
+                               </div>
+                           </div>
+                           <div class="lovradiopos">
+                               <input type="radio" id="sedentary" name="lov">
+                               <label>Sedentary</label><br/>
+                               <input type="radio" id="lactive" name="lov">
+                               <label >Lightly Active</label><br/>
+                               <input type="radio" id="mactive" name="lov">
+                               <label>Moderately Active</label><br/>
+                               <input type="radio" id="vactive" name="lov">
+                               <label >Very Active</label><br/>
+                           </div>
+                           <div class="targetpos">
+                            <input type="number" id="target" name="target">
+                            <select>
+                                <option>kg</option>
+                                <option>lbs</option>
+                            </select><br/>
+                           </div>
+                           <div class="submitpos">
+                               <button type="button" id="formsubmit" onclick="return validate()">Submit</button>
+                           </div>
+                       </forms>
+                       <div class="lovfontpos">
+                           <p style="font-size: 23px;">Life Style :<br/>(LOV)</p>
+                       </div>
+                       <div class="targetfontpos">
+                        <p style="font-size: 23px;">Target Weight Change:<br/>
+                            (enter Zero if you are <br/>looking for only
+                            weight maintenance)</p>
+                       </div>
+                   </div>
+               </div>
+        </div>
+    </div>
+
+     <div class="mainbody2">
+        <div class="mainbody2con">
+            <h3 style="position:relative;font-size: 32px;"><b>Your Custom Report - Calories for daily activities </b></h3>
+            <div class="formcon1">
+                <div style="padding-bottom: 1%;font-size: 25px;"><b>Body Mass Index</b><br/></div>
+            <p style="font-size: 22px;" id="bmiprint"></p>
+                BMI Category : Refer the image<br/>
+            <div><p>BMI between 19 and 25 is <span style="color: greenyellow;"><b>Healthy</b></span></p></div>
+
+            </div>
+            <div class="formcon">
+                <div style="padding-bottom: 1%;"><b>Calories for survival standard maintenance (BMR) :</b></div>
+                <p style="font-size: 21px;" id="bmrprint"></p>
+                <p style="font-size: 21px;">The basal metabolic rate (BMR) is the rate of energy expenditure of a <br/>person at rest.</p>
+            </div>
+
+            <div class="formcon">
+                <div style="padding-bottom: 1%;"><b>Calories for
+                Daily Energy
+                Expenditure :</b><br/></div>
+                <p style="font-size: 22px;" id="dailyprint"></p>
+                [Lifestyle PAL : Sedentary (1.1),
+                Lightly Active (1.3),
+                Moderately Active
+                (1.5), Very Active
+                (1.7)]
+            </div>
+            <div class="formcon">
+                <div style="padding-bottom: 2%;"><b>Waist
+                Circumference :</b><br/></div>
+                >40 inch for Men [<span style="color: red;">Risk</span>]<br/>
+                > 35 inch for Women [<span style="color: red;">Risk</span>]
+            </div>
+        </div>
+        <div class="bmichartimg">
+            <img src="img/bmi-chart.png" alt="chart" width="100%">
+        </div>
+     </div>
+
+     <div class="mainbody3">
+        <div class="calhead">
+            <h3>Calculate Energy Spent toward exercise Activities : </h3>
+        </div>
+        <div class="calbody">
+            <p style="font-size: 23px;">Steps involved in calculating energy spent towards exercise activities :<br/>
+                <ul style="font-size: 23px;list-style-type:lower-alpha;">
+                    <li>
+                        Please note down on a sheet, the set of activities you perform daily and
+                spend calories.
+                    </li>
+                    <li>
+                        From the below links, identify the most appropriate activity and
+                corresponding METS<br/> Code. This is an international guideline to calculate
+                calories spent for an activity. You<br/> can refer to one of the links given below.<br/>
+            <a href="https://www.ergotron.com/portals/0/literature/compendium-of-physical-activities.pdf" target="_blank" style="color: var(--accent-secondary-color);font-size: 23px;">Link 1</a>
+            <a href="http://prevention.sph.sc.edu/tools/docs/documents_compendium.pdf" target="_blank" style="color: var(--accent-secondary-color);font-size: 23px;">Link 2</a>
+                    </li>
+                    <li>
+                        Note down body weight
+                    </li>
+                    <li>Enter the details of the activities and calculate calories for each activity.
+                        Calories = Body Weight * METS * Duration/60 
+                        </li>
+                </ul>
+        <img src="img/extable.png" alt="eg" width="40%" style="position:relative;left:8.5%">
+        <div class="eghead">
+            <p style="font-size: 23px;">Example :</p>
+        </div>
+        </div>
+     </div>
+     
+     <div class="mainbody4">
+         <div class="analyzehead">
+            <h3>Analyzing BMI:</h3>
+         </div>
+         <p class="analyzecon">
+            The below table details BMI categories and possible risks when analyzed along with
+            Waist circumference.             
+         </p>
+         <div class="analyzeimg">
+             <img src="img/analyzebmi.png" alt="tableana" width="100%">
+        </div>  
+     </div>
+ </body>
+
+</html>

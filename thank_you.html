@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You Page</title>
+    <style>
+        .btn{
+        background-color: rgb(38, 100, 87);
+        width: 10%;
+        height: 15%;
+        color:white;
+        font-size: 16px;
+        border-radius:7px;
+        width: auto;
+    }
+    .btn:hover{
+        background-color: rgb(214, 55, 55);
+        transition: 0.10s;
+    }
+    </style>
+
+<script>
+    function loadPage()
+    {
+        window.location="index.html"
+    }
+</script>
+</head>
+<body>
+    <div style="text-align: center;margin-top: 200px;" > 
+        <h1>Thank You!</h1> 
+        <p>Please check your mail for further instructions on how to setup your account</p> 
+        <hr/>
+        <p>Having trouble? <a href="aboutPage.html">click here</a>  and fill the form or Contact us</p> <br>
+        <input type="button" value="Continue on Home Page" class="btn" onclick="loadPage()">
+    </div>
+</body>
+</html>

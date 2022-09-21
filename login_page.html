@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <style>
+            #background{
+            filter: brightness(50%);
+            background-size: cover;
+            width: 100%;
+        height: 100%;
+            }
+        body{
+            margin: 0;
+        }
+        .text 
+        {
+            position: absolute;
+            padding: 30px;
+            font-size: medium;
+            top: 47%;
+            left: 55%;
+            color: rgb(20, 211, 218) ;
+            font-family: Tahoma, Verdana, sans-serif;
+            
+        }
+        #heading{
+            position: absolute;
+            top: 22%;
+            left: 45%;
+            text-align: center;
+            color: white;
+            line-height: 0.5;
+        }
+        .btn{
+            background-color: rgb(224, 116, 14);
+            height: 15%;
+            color:white;
+            font-size: 16px;
+            border-radius: 10px;
+            width: auto;
+            
+        }
+        .btn:hover{
+            background-color: rgb(31, 131, 126);
+        }
+        input[type=text],select
+            {
+                width: 175px;
+                padding: 12px 18px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                height: 25px;
+                font-size: 12px;
+            }
+            input[type=password],select
+            {
+                width: 175px;
+                padding: 12px 18px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                height: 25px;
+                font-size: 12px;
+            }
+        
+        </style>
+        <script>
+            function loadPage()
+            {
+                     window.location="sign_up.html"
+            }
+            function validateForm()
+    {
+
+            var email=document.forms["regform"]["Email"].value;
+            var pass=document.forms["regform"]["password"].value;
+
+            if(!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))){
+                alert("enter your email ID in correct format");
+                return false;
+            }
+            else if(pass.length < 6)
+            {
+                alert("enter password more than 6 characters");
+                return false;
+            }
+            else if(email != 'yashasvi@gmail.com' && email != "ashwath@gmail.com" && email != "anish@gmail.com"  && email != "kishore@gmail.com" && email != "jayanth@gmail.com"){
+                    alert("enter registered email ID or create new account");
+                return false;
+                }
+
+                else if(pass != 'yashasvi'&& pass != "ashwath" && pass != "anish"  && pass != "kishore" && pass != "jayanth"){
+                    alert("enter correct password");
+                    return false;
+                }
+                alert("Logined successfully !!");
+                window.open("index.html");
+        }
+        </script>
+    </head>
+<body>
+   
+
+
+<div >
+    <img src="img/lg_pg_2.jpg" alt="IMG" id="background"  >
+    <div id="heading">
+        <p  style="text-shadow: 2px 2px 5px rgb(228, 51, 51);font-size: xx-large;font-weight:bolder;">MY HEALTH MY RESPONSIBILITY</p>
+        <p style="font-size: x-large;font-weight:bold;">Welcome Back</p>
+        <p style="font-weight:normal;color: rgb(226, 233, 217);">Keep sign-in and stay updated on your health</p>
+    </div>
+<div class="text">
+    <form name="regform" method="post" onsubmit="return validateForm()">
+        
+        Username:<br>
+        <input type="text" name="Email" placeholder="Enter your E-mail here" id="textbox" size="20"><br>
+
+        Password:<br>
+        <input type="password" name="password" placeholder="Enter you password here" id="textbox" size="20"><br><br>
+        
+        <input type="submit" value="Login" class="btn" style="width: 180px;height: 30px;"> <br><br>
+        <p style="color: rgb(20, 211, 218);font-weight: bold;font-family: Courier New, Courier, monospace;">Don't have an account? <a href="sign_up.html" style="color: white;">sign up</a></p>
+        
+    </form>
+
+
+</div>
+
+</div>
+</body>
+</html>

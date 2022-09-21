@@ -1,0 +1,187 @@
+:root
+    {
+    --primary-color: #A8D0E6;
+    --secondary-color: #FFFFFF;
+    --accent-primary-color: #24305E;
+    --accent-secondary-color: #F76C6C;
+    --accent-text-color: var(--secondary-color);
+    } 
+    #body{
+            margin: 0;
+            overflow-x: hidden;
+            font-size: large;
+    }
+    .mainheading{
+        position:absolute;
+        border-style: solid;
+        border-width: 5px;
+        padding-left: 15px;
+        padding-right: 20px;
+        left:2%;
+        top: 190px;
+        font-size: 45px;
+        color: var(--secondary-color);
+
+     }
+     .mainbody1{
+         background-color: var(--accent-primary-color);
+         padding-top: 1%;
+         padding-bottom: 4%;
+     }
+     .bodycon1{
+        margin-left: 4%;
+     }
+     .bodybg{
+        background-color:var(--accent-secondary-color) ;
+        padding-top: 2%;
+        padding-bottom: 7%;
+        padding-left: 4%;
+        margin-right: 40%;
+        border-style: solid;
+        border-color: var(--primary-color);
+        border-width: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+     .profileimg{
+        position:absolute;
+        left:46%;
+        top:660px;
+     }
+     .profilehead{
+         color:var(--secondary-color);
+         font-size: 30px;
+         background-color: var(--accent-secondary-color);
+         margin-right: 40%;
+         padding-left: 1%;
+     }
+     .formscon{
+        color:var(--secondary-color);
+        font-size: 23px;
+     }
+     .bodagepos{
+         position:relative;
+         left:2%;
+     }
+     .genderradiopos{
+         position:relative;
+         left:1%;
+     }
+     .lovradiopos{
+        position:relative;
+         left:15.5%;  top:118%;
+     }
+     .femalepos{
+         position:relative;
+         left:13.3%;
+     }
+     .otherspos{
+         position:relative;
+         left:13.3%;
+     }
+     .lovfontpos{
+         position:absolute;
+         top:785px;
+         left:6%;
+     }
+     .targetpos{
+         position:relative;
+         left:34%;
+         
+     }
+     .targetfontpos{
+         position:absolute;
+         top:890px;
+         left:6%;
+     }
+     .submitpos{
+        position:relative;
+        top:80px;
+        padding-left: 1%;
+     }
+     .mainbody2{
+        background-color: var(--accent-secondary-color);
+         color: var(--secondary-color);
+         padding-bottom: 3%;
+         padding-top: 1%;
+     }
+     .mainbody2con{
+         margin-left:42%;
+         font-size: 22px;
+         padding-bottom: 4%;
+     }
+     .formcon1{
+        border-style: solid;
+        background-color: var(--accent-primary-color);
+        border-color: var(--primary-color);
+        border-width: 5px;
+        margin-right: 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+     }
+     .formcon{
+        border-style: solid;
+        background-color: var(--accent-primary-color);
+        border-color: var(--primary-color);
+        border-width: 5px;
+        margin-right: 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+     }
+     .bmichartimg{
+         position:absolute;
+         top:1350px;
+         left:2%;
+         border-style: solid;
+         border-width: 5px;
+         border-color: var(--primary-color);
+         margin-right: 60%;
+     }
+     .mainbody3{
+         background-color: var(--accent-primary-color);
+         color: var(--secondary-color);
+         padding-top: 1%;
+         padding-bottom: 3%;
+     }
+     .calhead{
+         font-size: 25px;
+         margin-left: 3%;
+         margin-right: 40%;
+         padding-left: 1%;
+     }
+     .calbody{
+         margin-left: 4%;
+     }
+     .eghead{
+         position:absolute;
+         top:2450px;
+         left:4%;
+     }
+     .mainbody4{
+        background-color: var(--accent-secondary-color);
+         padding-top: 1%;
+         padding-bottom: 1%;
+     }
+     .analyzehead{
+        font-size: 27px;
+         margin-left: 4%;
+         background-color: var(--accent-primary-color);
+         margin-right: 40%;
+         padding-left: 1%;
+         color: var(--secondary-color);
+     }
+     .analyzecon{
+        margin-left: 4%;
+        color: var(--secondary-color);
+        font-size: 22px;
+     }
+     .analyzeimg{
+         position:relative;
+         left:4%;
+         width: 60%;
+         border-style: solid;
+         border-color: var(--primary-color);
+         border-width: 5px;
+     }

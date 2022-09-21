@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #A8D0E6;
+    --secondary-color: #FFFFFF;
+    --accent-primary-color: #24305E;
+    --accent-secondary-color: #F76C6C;
+    --accent-text-color: var(--secondary-color);
+}
+html,body{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    overflow: auto;
+}
+#headerContent{
+    width: 100%;
+    height: 500px;
+
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/LandingPageMainImage.jpg);
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+#header{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;                
+    margin-top: 11%;
+
+    border: 4px solid;
+
+    font-size: 80px;
+    font-family: helvatica;
+    font-weight: bold;
+    color: var(--accent-text-color);
+
+    display: inline-block;
+}
+#bodyContent{
+    width: 100%;
+}
+.infoCard:nth-of-type(even){
+    background-color: var(--primary-color);
+}
+.infoCard:nth-of-type(odd){
+    background-color: var(--secondary-color);
+}
+.infoCard:nth-of-type(even) .infoCardImg{
+    order: 1;
+}            
+.infoCard:nth-of-type(odd) .infoCardImg{
+    order: 2;
+}
+.infoCard:nth-of-type(even) .infoCardContent{
+    order: 2;
+}
+.infoCard:nth-of-type(odd) .infoCardContent{
+    order: 1;
+}
+.infoCard{
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    
+    display: flex;
+}
+.infoCardContent{
+    flex: 60%;
+
+    margin: 10px;
+    padding: 20px;
+
+    border: 2px solid var(--accent-primary-color);
+    border-radius: 10px;
+
+    text-align: justify;
+    font-size: xx-large;
+}
+.infoCardContentHeader{
+    width: 100%;
+
+    font-size: 60px;
+    text-align: center;
+}
+.infoCardImg{
+    flex: 40%;
+    background-size: cover;
+    background-position: right;
+}
+.reviewSlides {
+    width: 100%;
+    height: 500px;
+}
